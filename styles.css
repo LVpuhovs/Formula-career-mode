@@ -1,3 +1,4 @@
+/* Reset default margin, padding, and box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +9,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #fff; /* White background */
-    color: #333;
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333; /* Dark background */
+    background-color: #ff0000; /* Red background */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -41,20 +42,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff0000; /* Red text on hover */
+    color: #333; /* Dark gray text on hover */
+    background-color: #fff; /* White background on hover */
 }
 
 section {
     padding: 20px;
-    background-color: #ff0000; /* Red background */
+    background-color: #fff; /* White background */
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #fff; /* White text */
+    color: #333; /* Dark gray text */
 }
 
 footer {
-    background-color: #333; /* Dark background */
+    background-color: #333; /* Dark gray background */
     color: #fff;
     text-align: center;
     padding: 20px;
