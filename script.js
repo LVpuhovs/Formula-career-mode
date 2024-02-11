@@ -1,6 +1,3 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-
 function showLoginForm() {
     // Hide signup form if visible
     document.getElementById("signup-form").style.display = "none";
@@ -40,53 +37,3 @@ function logout() {
     document.getElementById("logout-link").style.display = "none";
 }
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDwJomB5vQn0uzW6Imtzj5doKpaPmFy5lI",
-    authDomain: "f1-career-mode.firebaseapp.com",
-    databaseURL: "https://f1-career-mode-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "f1-career-mode",
-    storageBucket: "f1-career-mode.appspot.com",
-    messagingSenderId: "959963427852",
-    appId: "1:959963427852:web:b215d52fed51139e306a29",
-    measurementId: "G-QSVTS91P66"
-  };
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  // Sign up
-firebase.auth().createUserWithEmailAndPassword(email, password)
-.then((userCredential) => {
-  // Signed up successfully
-  const user = userCredential.user;
-})
-.catch((error) => {
-  // Handle sign up errors
-});
-
-// Log in
-firebase.auth().signInWithEmailAndPassword(email, password)
-.then((userCredential) => {
-  // Logged in successfully
-  const user = userCredential.user;
-})
-.catch((error) => {
-  // Handle login errors
-});
-
-// Log out
-firebase.auth().signOut()
-.then(() => {
-  // Logged out successfully
-})
-.catch((error) => {
-  // Handle logout errors
-});
-firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      // User is signed in
-    } else {
-      // User is signed out
-    }
-  });
-  
